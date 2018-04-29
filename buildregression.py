@@ -73,7 +73,7 @@ def testToday(model,eradata):
     concat = testset[['ERA_diff','Day_Night']]
     concat = pd.get_dummies(concat, columns =['Day_Night'])
     results = model.predict_proba(concat)
-    resultsdf = pd.DataFrame(results.reshape(3,2))
+    resultsdf = pd.DataFrame(results.reshape(results.shape[0],2))
     resultsdf.rename(columns={0:"prob_VisTeamWin"},inplace=True)
     resultsdf.rename(columns={1:"prob_HomTeamWin"},inplace=True)
     testset = testset.join(resultsdf)

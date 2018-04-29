@@ -48,3 +48,4 @@ for div in times:
 todaysgamestwo = todaysgamestwo.join(h_starting_pitchers)
 todaysgamestwo = todaysgamestwo.join(start_times)
 print(todaysgamestwo)
+todaysgamestwo.to_csv('testingdata.csv')
