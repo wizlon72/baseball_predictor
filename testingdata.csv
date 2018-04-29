@@ -1,5 +1,16 @@
-﻿Home_Team,Visiting_Team,H_Starter_Name,V_Starter_Name,Day_Night
-ARI,SFN,Zack Greinke,Madison Bumgarner,D
-SLN,CHN,Carlos Martinez,Jon Lester,D
-TBA,NYA,Chris Archer,Masahiro Tanaka,N
-CIN,PHI,Scott Feldman,Jeremy Hellickson,N
+,Home_Team,Visiting_Team,V_Starter_Name,H_Starter_Name,Day_Night
+0,Baltimore Orioles,Detroit Tigers,Daniel Norris,Kevin Gausman,D
+1,Boston Red Sox,Tampa Bay Rays,Matt Andriese,Rick Porcello,D
+2,Toronto Blue Jays,Texas Rangers,Martin Perez,J.A. Happ,D
+3,Miami Marlins,Colorado Rockies,Chad Bettis,Caleb Smith,D
+4,Cleveland Indians,Seattle Mariners,Marco Gonzales,Josh Tomlin,D
+5,Washington Nationals,Arizona Diamondbacks,Robbie Ray,Gio Gonzalez,D
+6,Philadelphia Phillies,Atlanta Braves,Brandon McCarthy,Vince Velasquez,D
+7,Pittsburgh Pirates,St. Louis Cardinals,Luke Weaver,Nick Kingham,D
+8,Minnesota Twins,Cincinnati Reds,Tyler Mahle,Jose Berrios,D
+9,Houston Astros,Oakland Athletics,Trevor Cahill,Gerrit Cole,D
+10,Kansas City Royals,Chicago White Sox,Hector Santiago,Ian Kennedy,D
+11,Chicago Cubs,Milwaukee Brewers,Zach Davies,Tyler Chatwood,D
+12,San Diego Padres,New York Mets,Zack Wheeler,Bryan Mitchell,D
+13,San Francisco Giants,Los Angeles Dodgers,Kenta Maeda,Ty Blach,D
+14,Los Angeles Angels,New York Yankees,CC Sabathia,Tyler Skaggs,N
