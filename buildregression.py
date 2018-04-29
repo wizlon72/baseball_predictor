@@ -50,49 +50,33 @@ def trimForRegression(df1):
 
 def testToday(model,eradata):
     testset = pd.read_csv('testingdata.csv')
-#    visitors = eradata.rename(columns={'ERA':'V_S_ERA'})
-#    home = eradata.rename(columns={'ERA':'H_S_ERA'})
-#    testset = testset.join(visitors, on='V_Starter_Name')
-#    testset = testset.join(home, on='H_Starter_Name')
-#    testset['ERA_diff']=testset['H_S_ERA']-testset['V_S_ERA']
     testset = pitcherERA(testset,eradata)
     testset.dropna(axis=0, how='any',inplace = True)
     testset.reset_index(drop=True,inplace=True)
-    print (testset)
     concat = testset[['ERA_diff','Day_Night']]
     concat = pd.get_dummies(concat, columns =['Day_Night'])
     results = model.predict_proba(concat)
-    print (results)
     resultsdf = pd.DataFrame(results.reshape(results.shape[0],2))
-    resultsdf.rename(columns={0:"prob_VisTeamWin"},inplace=True)
-    resultsdf.rename(columns={1:"prob_HomTeamWin"},inplace=True)
-    print (resultsdf)
+    resultsdf.rename(columns={0:"prob_VisTeamWin",1:"prob_HomTeamWin"},inplace=True)
     testset = testset.join(resultsdf)
-#    return results
+    print('Predictions for games today')
     print(testset)
+
 olddata = pd.read_csv('GL2017.csv' )
 pitcherdata = pd.read_csv('pitchers.csv', index_col='Name')
-#print (olddata)
 newdf = addWinner(olddata)
 newdf = homeWinner(newdf)
 newdf = pitcherERA(newdf, pitcherdata)
-#newdf = newdf['V_Starter','Winner','homeTeamWin','Name','ERA']
-#print olddata.head(3)
-#print "is this working"
-# Plot showing distributions of 0's and 1's
-    #sns.countplot(x='homeTeamWin',data=newdf, palette='hls')
-    #plt.show()
 data = trimForRegression(newdf)
 X = data.iloc[:,1:]
-#print (X)
 y = data.iloc[:,0]
-#print (y)
 X_train, X_test, y_train, y_test = train_test_split(X, y, random_state=0)
-#print(X_train.shape)
 classifier = LogisticRegression(random_state=0)
 classifier.fit(X_train, y_train)
 y_pred = classifier.predict(X_test)
 confusion_matrix = confusion_matrix(y_test,y_pred)
+print ('Confusion matrix from train/test on historical data:')
 print(confusion_matrix)
+print ('Coefficients for independent variables')
 print (classifier.coef_)
 testToday(classifier,pitcherdata)
