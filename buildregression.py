@@ -1,9 +1,11 @@
+import webscraper
 import numpy as np
 import pandas as pd
 from sklearn import preprocessing
 from sklearn.linear_model import LogisticRegression
 from sklearn.cross_validation import train_test_split
 from sklearn.metrics import confusion_matrix
+
 def addWinner(df):
     visitors = df.Visiting_Team_Score > df.Home_Team_Score
     home = df.Home_Team_Score > df.Visiting_Team_Score
@@ -49,6 +51,7 @@ def trimForRegression(df1):
     return dftest
 
 def testToday(model,eradata):
+    webscraper.get_latest_games()
     testset = pd.read_csv('testingdata.csv')
     testset = pitcherERA(testset,eradata)
     testset.dropna(axis=0, how='any',inplace = True)
