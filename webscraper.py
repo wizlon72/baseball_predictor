@@ -33,10 +33,8 @@ def get_latest_games():
             start_times=start_times.append(pd.DataFrame([['1','0']], columns=['Day_Night_D','Day_Night_N']),ignore_index=True)
         else:
             start_times=start_times.append(pd.DataFrame([['0','1']], columns=['Day_Night_D','Day_Night_N']),ignore_index=True)
-        print(time)
     todaysgamestwo = todaysgamestwo.join(h_starting_pitchers)
     todaysgamestwo = todaysgamestwo.join(start_times)
-    print(todaysgamestwo)
     todaysgamestwo.to_csv('testingdata.csv')
 
 if __name__ == '__main__':
