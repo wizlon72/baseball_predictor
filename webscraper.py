@@ -10,10 +10,9 @@ def get_latest_games():
     games = page_content.find_all(class_='module')
     homepitchers = page_content.find_all(class_='pitcher last')
     times = page_content.find_all(class_='pitcher first')
-    todaysgames =pd.DataFrame(columns=['Home_Team','Visiting_Team','H_Starter_Name','V_Starter_Name','Day_Night'])
     todaysgamestwo = pd.DataFrame(columns=['Home_Team','Visiting_Team','V_Starter_Name'])
     h_starting_pitchers = pd.DataFrame(columns=['H_Starter_Name'])
-    start_times = pd.DataFrame(columns=['Day_Night'])
+    start_times = pd.DataFrame(columns=['Day_Night_D','Day_Night_N'])
     at_regex = " @ "
     comma_regex = ","
     t_regex = "T"
@@ -31,9 +30,9 @@ def get_latest_games():
         longtime = div.attrs['local_time']
         time = longtime.split(t_regex)[1]
         if time < '17:00:00':
-            start_times=start_times.append(pd.DataFrame([['D']], columns=['Day_Night']),ignore_index=True)
+            start_times=start_times.append(pd.DataFrame([['1','0']], columns=['Day_Night_D','Day_Night_N']),ignore_index=True)
         else:
-            start_times=start_times.append(pd.DataFrame([['N']], columns=['Day_Night']),ignore_index=True)
+            start_times=start_times.append(pd.DataFrame([['0','1']], columns=['Day_Night_D','Day_Night_N']),ignore_index=True)
         print(time)
     todaysgamestwo = todaysgamestwo.join(h_starting_pitchers)
     todaysgamestwo = todaysgamestwo.join(start_times)

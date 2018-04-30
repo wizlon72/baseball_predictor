@@ -1,16 +1,12 @@
-,Home_Team,Visiting_Team,V_Starter_Name,H_Starter_Name,Day_Night
-0,Baltimore Orioles,Detroit Tigers,Daniel Norris,Kevin Gausman,D
-1,Boston Red Sox,Tampa Bay Rays,Matt Andriese,Rick Porcello,D
-2,Toronto Blue Jays,Texas Rangers,Martin Perez,J.A. Happ,D
-3,Miami Marlins,Colorado Rockies,Chad Bettis,Caleb Smith,D
-4,Cleveland Indians,Seattle Mariners,Marco Gonzales,Josh Tomlin,D
-5,Washington Nationals,Arizona Diamondbacks,Robbie Ray,Gio Gonzalez,D
-6,Philadelphia Phillies,Atlanta Braves,Brandon McCarthy,Vince Velasquez,D
-7,Pittsburgh Pirates,St. Louis Cardinals,Luke Weaver,Nick Kingham,D
-8,Minnesota Twins,Cincinnati Reds,Tyler Mahle,Jose Berrios,D
-9,Houston Astros,Oakland Athletics,Trevor Cahill,Gerrit Cole,D
-10,Kansas City Royals,Chicago White Sox,Hector Santiago,Ian Kennedy,D
-11,Chicago Cubs,Milwaukee Brewers,Zach Davies,Tyler Chatwood,D
-12,San Diego Padres,New York Mets,Zack Wheeler,Bryan Mitchell,D
-13,San Francisco Giants,Los Angeles Dodgers,Kenta Maeda,Ty Blach,D
-14,Los Angeles Angels,New York Yankees,CC Sabathia,Tyler Skaggs,N
+,Home_Team,Visiting_Team,V_Starter_Name,H_Starter_Name,Day_Night_D,Day_Night_N
+0,Cleveland Indians,Texas Rangers,Cole Hamels,Trevor Bauer,0,1
+1,Chicago Cubs,Colorado Rockies,Kyle Freeland,Jon Lester,0,1
+2,Washington Nationals,Pittsburgh Pirates,Jameson Taillon,Tanner Roark,0,1
+3,Boston Red Sox,Kansas City Royals,Jason Hammel,Eduardo Rodriguez,0,1
+4,Cincinnati Reds,Milwaukee Brewers,Jhoulys Chacin,Brandon Finnegan,0,1
+5,Miami Marlins,Philadelphia Phillies,Jake Arrieta,Dan Straily,0,1
+6,Detroit Tigers,Tampa Bay Rays,Jake Faria,Jordan Zimmermann,0,1
+7,Houston Astros,New York Yankees,Sonny Gray,Charlie Morton,0,1
+8,Minnesota Twins,Toronto Blue Jays,Aaron Sanchez,Lance Lynn,0,1
+9,Arizona Diamondbacks,Los Angeles Dodgers,Ross Stripling,Zack Greinke,0,1
+10,San Francisco Giants,San Diego Padres,Eric Lauer,Jeff Samardzija,0,1

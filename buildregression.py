@@ -56,8 +56,9 @@ def testToday(model,eradata):
     testset = pitcherERA(testset,eradata)
     testset.dropna(axis=0, how='any',inplace = True)
     testset.reset_index(drop=True,inplace=True)
-    concat = testset[['ERA_diff','Day_Night']]
-    concat = pd.get_dummies(concat, columns =['Day_Night'])
+    print(testset)
+    concat = testset[['ERA_diff','Day_Night_D','Day_Night_N']]
+    print(concat)
     results = model.predict_proba(concat)
     resultsdf = pd.DataFrame(results.reshape(results.shape[0],2))
     resultsdf.rename(columns={0:"prob_VisTeamWin",1:"prob_HomTeamWin"},inplace=True)
